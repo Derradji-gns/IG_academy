@@ -1,3 +1,5 @@
+import logo from "/public/graphics/logo.jpg"
+
 function Footer() {
     return(
         <div>
@@ -6,7 +8,7 @@ function Footer() {
   {/* Grid */}
   <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-10">
     <div className="col-span-full   hidden lg:col-span-1 lg:block">
-      <img className="w-auto h-18 pl-6" src="/public/graphics/logo.jpg" alt="" />
+      <img className="w-auto h-18 pl-6" src={logo} alt="" />
       <p className="mt-3 text-xs sm:text-sm text-gray-600">
         © 2025 IGENERGY Devs.
       </p>
@@ -74,7 +76,7 @@ function Footer() {
 
       <div className="flex flex-wrap justify-between items-center gap-10">
         <div className="mt-3 sm:hidden">
-          <img className="w-auto h-12 pl-7 " src="/public/graphics/logo.jpg" alt="" />
+          <img className="w-auto h-12 pl-7 " src={logo} alt="" />
           <p className="mt-1 text-xs sm:text-sm text-gray-600">
             © 2025 IGENERGY Devs.
           </p>

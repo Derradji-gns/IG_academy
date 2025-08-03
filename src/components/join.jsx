@@ -1,3 +1,5 @@
+import logo3 from "/public/graphics/logo3.jpg"
+
 function Join() {
     return (
       <div>
@@ -22,7 +24,7 @@ function Join() {
               <div className="aspect-w-16 aspect-h-9 lg:aspect-none">
                 <img
                   className="w-full object-cover rounded-xl"
-                  src="/public/graphics/logo3.jpg"
+                  src={logo3}
                   alt="Features Image"
                 />
               </div>
