@@ -1,6 +1,11 @@
 import logo3 from "/public/graphics/logo3.jpg"
 
 function Join() {
+
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:amine.derradji@ensttic.dz?subject=Activation request=.';
+  };
+
     return (
       <div>
         {/* Approach */}
@@ -121,6 +126,7 @@ function Join() {
                 {/* End Item */}
 
                 <a
+                onClick={handleEmailClick}
                   className="group inline-flex items-center gap-x-2 py-2 px-3 bg-blue-500 hover:bg-blue-600 font-medium text-sm text-white rounded-full focus:outline-hidden"
                   href="#"
                 >

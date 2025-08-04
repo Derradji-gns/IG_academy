@@ -7,6 +7,7 @@ import Stat from './components/stat'
 import Join from './components/join'
 import Footer from './components/footer'
 import Form from "./components/form";
+import Auth from "./components/auth";
 
 function App() {
  
@@ -36,7 +37,13 @@ function App() {
       
       <Form/>
       </>
+      
             }/>
+            <Route path="/Auth" element={
+              <>
+              <Auth/>
+                </>
+            } />
          </Routes>
          <Footer/>
         </Router>

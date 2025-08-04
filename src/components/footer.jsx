@@ -19,10 +19,10 @@ function Footer() {
       <h4 className="text-xs font-semibold text-gray-900 uppercase">IGENERGY</h4>
 
       <div className="mt-3 grid space-y-3 text-sm">
-        <p><a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800" href="#">Website</a></p>
-        <p><a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800" href="#">Instgram</a></p>
-        <p><a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800" href="#">Facebook</a></p>
-        <p><a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800" href="#">Linkedin</a></p>
+        <p><a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800" href="http://Derradji-gns.github.io/igenergyClub">Website</a></p>
+        <p><a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800" href="https://www.instagram.com/igenergy.club?igsh=dXR2YjBoMzdhZnJh">Instgram</a></p>
+        <p><a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800" href="https://www.facebook.com/igenergySC?mibextid=JRoKGi">Facebook</a></p>
+        <p><a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800" href="https://www.linkedin.com/company/igenergy-club/">Linkedin</a></p>
       </div>
     </div>
     {/* End Col */}
@@ -58,9 +58,9 @@ function Footer() {
       <h4 className="text-xs font-semibold text-gray-900 uppercase">Developer</h4>
 
       <div className="mt-3 grid space-y-3 text-sm">
-        <p><a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800" href="#">Website</a></p>
-        <p><a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800" href="#">Linkedin</a></p>
-        <p><a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800" href="#">GitHub</a></p>
+        <p><a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800" href="http://Derradji-gns.github.io/Personal1">Website</a></p>
+        <p><a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800" href="https://www.linkedin.com/in/derradji-amine-abdelbasset-94790531a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Linkedin</a></p>
+        <p><a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800" href="https://github.com/Derradji-gns">GitHub</a></p>
       </div>
 
 

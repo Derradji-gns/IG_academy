@@ -13,7 +13,7 @@ function Board() {
         In recent years, IGENERGY  has shifted its focus toward building meaningful technology projects. We've participated in national Events to represent ENSTTIC and showcase our skills, gaining valuable experience and recognition. This shift has helped us grow both technically and as a team.
       </p>
       <p className="mt-5">
-        <a className="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium" href="#">
+        <a className="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium" href="http://Derradji-gns.github.io/igenergyClub">
           check the website
           <svg className="shrink-0 size-4 transition ease-in-out group-hover:translate-x-1 group-focus:translate-x-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
         </a>

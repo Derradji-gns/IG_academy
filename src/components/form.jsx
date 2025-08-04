@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom"; 
+import walid from "/public/graphics/walid.jpg"
+
 function Form() {
   return(
     <div>
@@ -37,7 +40,7 @@ function Form() {
           <footer className="mt-3">
             <div className="flex items-center gap-x-4">
               <div className="shrink-0">
-                <img className="size-8 rounded-full" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Avatar" />
+                <img className="size-8 rounded-full" src={walid} alt="Avatar" />
               </div>
               <div className="grow">
                 <div className="font-semibold text-gray-800 flex items-center gap-1 "><p className="inline">Benouali Omar Walid</p>
@@ -61,12 +64,13 @@ function Form() {
             <div className="p-4 sm:p-7 flex flex-col bg-white rounded-2xl shadow-lg">
               <div className="text-center">
                 <h1 className="block text-2xl font-bold text-gray-800">Start your Knowledge Adventure </h1>
-                <p className="mt-2 text-sm text-gray-600">
-                  Already have an account?
+                <p className="mt-2 text-sm text-gray-600 inline">
+                  Already have an account? </p>
+                  <Link to="/Auth">
                   <a className="text-blue-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium" href="#">
                     Sign in here
-                  </a>
-                </p>
+                  </a></Link>
+               
               </div>
 
               <div className="mt-5">
