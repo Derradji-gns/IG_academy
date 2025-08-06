@@ -1,0 +1,30 @@
+const [formsInfo, setFormsInfo] = useState({
+
+        email:"",
+        password:"",
+    });
+
+    const handleLogin = async (e) =>{
+        e.preventDefault();
+
+        signInWithEmailAndPassword(auth, formsInfo.email, formsInfo.password)
+        .then(() => {
+          
+          
+          
+        })
+        .catch(() => {
+          alert("Enter your informations correctly")
+          setFormsInfo({
+            email:"",
+            password:""
+          })
+        });
+           
+      }
+
+
+              value={formsInfo.email}
+                onChange={(event) =>{
+                    setFormsInfo({...formsInfo, email:event.target.value})
+                }}

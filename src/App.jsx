@@ -8,6 +8,10 @@ import Join from './components/join'
 import Footer from './components/footer'
 import Form from "./components/form";
 import Auth from "./components/auth";
+import Fields from "./components/fields";
+import Docs from "./components/docs";
+import Feed from "./components/feed";
+import Page from "./components/page";
 
 function App() {
  
@@ -15,7 +19,6 @@ function App() {
   return (      
      <div>
       <Router>
-          
           
           
           <Routes>
@@ -26,6 +29,7 @@ function App() {
               <Board/>
               <Stat/>
               <Join/>
+              <Footer/>
               
               </>
             }
@@ -38,14 +42,46 @@ function App() {
       <Form/>
       </>
       
-            }/>
-            <Route path="/Auth" element={
+            }/>            <Route path="/Auth" element={
               <>
               <Auth/>
                 </>
             } />
+
+                        <Route  element={
+              <>
+              <Page/>
+              </>   }>
+
+
+
+
+            <Route path="/Fields" element={
+              <>
+              <Fields/>
+              </>
+            }/>
+
+                          <Route path="/Docs" element={
+              <>
+              <Docs/>
+              </>
+            }/>
+
+            <Route path="/Feed" element={
+              <>
+              <Feed/>
+              </>
+            }/>
+
+              </Route>
+              <Route path="/Page" element={
+                <>
+                <Page/>                
+                </>
+              }/>
          </Routes>
-         <Footer/>
+         
         </Router>
        
     </div>

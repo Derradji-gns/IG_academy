@@ -3,7 +3,7 @@ import logo3 from "/public/graphics/logo3.jpg"
 function Join() {
 
   const handleEmailClick = () => {
-    window.location.href = 'mailto:amine.derradji@ensttic.dz?subject=Activation request=.';
+    window.location.href = 'mailto:amine.derradji@ensttic.dz?subject=Account Activation request=Sir I am writing to request the activation of my account on your platform / I completed the necessary steps regarding this matter.';
   };
 
     return (
