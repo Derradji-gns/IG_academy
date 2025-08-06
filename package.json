@@ -13,12 +13,20 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@heroui/react": "^2.8.2",
+    "@tabler/icons-react": "^3.34.1",
     "@tailwindcss/vite": "^4.1.11",
+    "clsx": "^2.1.1",
+    "dropzone": "^6.0.0-beta.2",
     "firebase": "^12.0.0",
+    "framer-motion": "^12.23.12",
     "gh-pages": "^6.3.0",
+    "motion": "^12.23.12",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-dropzone": "^14.3.8",
     "react-router-dom": "^7.7.1",
+    "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {

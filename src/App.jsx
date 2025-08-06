@@ -12,6 +12,7 @@ import Fields from "./components/fields";
 import Docs from "./components/docs";
 import Feed from "./components/feed";
 import Page from "./components/page";
+import Contr from "./components/contr";
 
 function App() {
  
@@ -73,6 +74,11 @@ function App() {
               <Feed/>
               </>
             }/>
+                          <Route path="/Contr" element={
+                <>
+                <Contr/>
+                </>
+              }/>
 
               </Route>
               <Route path="/Page" element={
@@ -80,6 +86,7 @@ function App() {
                 <Page/>                
                 </>
               }/>
+
          </Routes>
          
         </Router>
