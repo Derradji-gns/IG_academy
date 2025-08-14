@@ -9,10 +9,10 @@ import Footer from './components/footer'
 import Form from "./components/form";
 import Auth from "./components/auth";
 import Fields from "./components/fields";
-import Docs from "./components/docs";
 import Feed from "./components/feed";
 import Page from "./components/page";
 import Contr from "./components/contr";
+import Docs from "./components/docs";
 
 function App() {
  
@@ -63,11 +63,7 @@ function App() {
               </>
             }/>
 
-                          <Route path="/Docs" element={
-              <>
-              <Docs/>
-              </>
-            }/>
+
 
             <Route path="/Feed" element={
               <>
@@ -79,8 +75,14 @@ function App() {
                 <Contr/>
                 </>
               }/>
+                                          <Route path="/Docs" element={
+                <>
+                <Docs/>                
+                </>
+              }/>
 
               </Route>
+
               <Route path="/Page" element={
                 <>
                 <Page/>                

@@ -1,27 +1,28 @@
 import { useState } from "react";
 import Form from "./form";
-import { Await, Link, Navigate, useNavigate } from "react-router-dom";
-import auth from "../firebase"
-import { signInWithEmailAndPassword } from "firebase/auth";
+import {  Link,  useNavigate } from "react-router-dom";
+import { supabase } from "../supabaseClient";
+
 
 function Auth() {
-  const[formInfo, setFormInfo] = useState({
-    email: "",
-    password: "",
-  });
-  const navigate = useNavigate()
+  const navigate = useNavigate("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+    const [loading, setLoading] = useState(false);
 
-const handleClick = (e) => {
-  e.preventDefault();
-  try {
-    Await
-  signInWithEmailAndPassword(auth, formInfo.email, formInfo.password);  
-  navigate("/Page");
-  } catch  {
-    alert("informations error");
-    
 
+async function signIn() {
+  setLoading(true);
+
+  const { error } = await supabase.auth.signInWithPassword({ email, password });
+
+  if (error) {
+    alert("خطأ في تسجيل الدخول: " + error.message);
+  } else {
+    navigate("/Page");
   }
+
+  setLoading(false);
 }
 
     return (
@@ -108,13 +109,8 @@ const handleClick = (e) => {
                         name="email"
                         className="py-2.5 sm:py-3 px-4 block w-full border-gray-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                         required
-                        value={formInfo.email}
-                        onChange={(event) => {
-                          setFormInfo({
-                            ...formInfo,
-                            email: event.target.value,
-                          });
-                        }}
+                       value={email}
+        onChange={(e) => setEmail(e.target.value)}
                         aria-describedby="email-error"
                       />
                       <div className="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
@@ -154,13 +150,8 @@ const handleClick = (e) => {
                         name="password"
                         className="py-2.5 sm:py-3 px-4 block w-full shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                         required
-                        value={formInfo.password}
-                        onChange={(event) => {
-                          setFormInfo({
-                            ...formInfo,
-                            password: event.target.value,
-                          });
-                        }}
+                        value={password}
+        onChange={(e) => setPassword(e.target.value)}
                         aria-describedby="password-error"
                       />
                       <div className="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
@@ -189,7 +180,8 @@ const handleClick = (e) => {
 
                   {/* End Checkbox */}
                   <button
-                    onClick={handleClick}
+                    onClick={signIn}
+                    disabled={loading}
                     type="submit"
                     className="w-full  py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
                   >

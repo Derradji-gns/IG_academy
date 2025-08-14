@@ -2,16 +2,16 @@ import { FileUploadDemo } from "./update";
 
 function Contr() {
     return(
-        <div>
+        <div className="bg-gray-200">
             {/* Contact Us */}
 <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
   <div className="max-w-2xl lg:max-w-5xl mx-auto">
     <div className="text-center">
       <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl">
-        Contact us
+        Contribute
       </h1>
       <p className="mt-1 text-gray-600">
-        We'd love to talk about how we can help you.
+        We'd love to contribute us by upload documentations.
       </p>
     </div>
 
@@ -27,7 +27,7 @@ function Contr() {
             {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label htmlFor="hs-firstname-contacts-1" className="sr-only">First Name</label>
+                <label htmlFor="hs-firstname-contacts-1" className="sr-only">Doc Name</label>
                 <input type="text" name="hs-firstname-contacts-1" id="hs-firstname-contacts-1" className="shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="First Name" />
               </div>
 
@@ -44,7 +44,7 @@ function Contr() {
             </div>
 
             <div>
-              <label htmlFor="hs-phone-number-1" className="sr-only">Phone Number</label>
+              <label htmlFor="hs-phone-number-1" className="sr-only"></label>
               <input type="text" name="hs-phone-number-1" id="hs-phone-number-1" className="shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="Phone Number" />
             </div>
 

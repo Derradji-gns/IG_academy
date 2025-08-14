@@ -1,31 +1,22 @@
 import { useState } from "react";
-import { Link, useNavigate, Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import logo from "/public/graphics/logo.jpg"
-import { getAuth } from "firebase/auth";
-import { signOut } from "firebase/auth";
+
 import Drop from "./drop";
 
 
 function Page() {
-const auth = getAuth();
+
 
 const [sideOpen, setSideOpen] = useState(true);
 
-const navigate = useNavigate();
 
 const toggleMenu  = () =>{
   setSideOpen(!sideOpen);
 }
 
 
-    const handleSignOut = async () => {
-        try {
-            await signOut(auth);
-            navigate("/IG_academy");
-        } catch (error) {
-            console.error("Error signing out:", error);
-        }
-    };
+
 
   return (
     <div>
@@ -59,7 +50,7 @@ const toggleMenu  = () =>{
 
             <div className="flex flex-row items-center justify-end gap-1 pr-5">
               <button
-                onClick={handleSignOut}
+                
                 className="bg-red-500 w-20 h-7 text-white rounded-2xl hover:bg-blue-400"
               >
                 Sign Out
@@ -425,7 +416,7 @@ const toggleMenu  = () =>{
 
       {/* Content */}
 
-      <div className=" lg:ml-64 h-200 sm:p-6 bg-gray-200 sm:space-y-6">
+      <div className=" lg:ml-64 h-auto sm:p-6 bg-gray-200 sm:space-y-6">
         <Outlet />
       </div>
       {/* End Content */}
