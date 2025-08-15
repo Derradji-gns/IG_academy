@@ -13,6 +13,12 @@ import Feed from "./components/feed";
 import Page from "./components/page";
 import Contr from "./components/contr";
 import Docs from "./components/docs";
+import Cyber from "./components/cyber";
+import AI from "./components/ai"
+import DATASC from "./components/datas"
+import OS from "./components/os"
+import BIGDATA from "./components/big";
+import DEEPLER from "./components/deep"
 
 function App() {
  
@@ -78,6 +84,42 @@ function App() {
                                           <Route path="/Docs" element={
                 <>
                 <Docs/>                
+                </>
+              }/>
+
+                                       <Route path="/Cyber" element={
+                <>
+                <Cyber/>                
+                </>
+              }/>
+
+                                       <Route path="/AI" element={
+                <>
+                <AI/>                
+                </>
+              }/>
+
+                                    <Route path="/DATASC" element={
+                <>
+                <DATASC/>                
+                </>
+              }/>
+
+                                 <Route path="/BIGDATA" element={
+                <>
+                <BIGDATA/>                
+                </>
+              }/>
+
+                                 <Route path="/DEEPLER" element={
+                <>
+                <DEEPLER/>                
+                </>
+              }/>
+
+                                 <Route path="/OS" element={
+                <>
+                <OS/>                
                 </>
               }/>
 

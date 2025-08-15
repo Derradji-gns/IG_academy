@@ -6,7 +6,7 @@ import Loading from "./loading";
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;
 
-export default function Docs() {
+export default function AI() {
   const [pdfFiles, setPdfFiles] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -14,7 +14,7 @@ export default function Docs() {
     async function fetchPdfFiles() {
       setLoading(true);
       const { data, error } = await supabase.storage
-        .from("doc") // اسم البكيت
+        .from("AI") // اسم البكيت
         .list("", { limit: 100 });
 
       if (error) {
@@ -30,7 +30,7 @@ export default function Docs() {
       const pdfWithCovers = await Promise.all(
         pdfOnly.map(async (file) => {
           const { data: urlData } = supabase.storage
-            .from("doc")
+            .from("AI")
             .getPublicUrl(file.name);
 
           let coverImage = null;
@@ -77,23 +77,23 @@ export default function Docs() {
 <div class=" sm:px-6 lg:px-8 lg:py-14 mx-auto">
   <div class="grid sm:grid-cols-2  lg:grid-cols-3 gap-6">
      {pdfFiles.map((file) => (
-    <div class="group flex flex-col h-full bg-white border   border-gray-200 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-xl  ">
+    <div class="w-[80%] lg:w-full mr-auto ml-auto group flex flex-col h-full bg-white border   border-gray-200 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-xl  ">
       <div class="h-52 flex flex-col justify-center items-center bg-blue-600 rounded-t-xl">
         <img className="w-full h-full rounded-t-xl" src={file.cover} alt="" />
       </div>
       <div class="p-4 md:p-6">
-        <span class="block mb-1 text-xs font-semibold uppercase text-blue-600 dark:text-blue-500">
-          Cyber Securety
+        <span class="block mb-1 text-xs font-semibold uppercase text-yellow-500 ">
+          Artificial Intelligence
         </span>
         <h3 class="text-xl break-words font-semibold text-black ">
           {file.name}
         </h3>
         <p class="mt-3 text-gray-500 dark:text-neutral-500">
-          A software that develops products for software developers and developments.
+          AI (Artificial Intelligence) – Documentation exploring algorithms and systems that simulate human intelligence.
         </p>
       </div>
-      <div class="mt-auto rounded-b-xl flex border-t border-gray-200 divide-x divide-gray-200 dark:border-neutral-700 bg-white">
-        <a class="w-full py-3 px-4 inline-flex justify-center items-center rounded-bl-xl gap-x-2 text-sm font-medium rounded-es-xl text-white rounded-br-xl   bg-blue-500   focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none    dark:hover:bg-blue-600 " href={file.url}>
+      <div class="mt-auto rounded-b-xl flex border-t border-gray-200 divide-x divide-gray-200  bg-white">
+        <a class="w-full py-3 px-4 inline-flex justify-center items-center rounded-bl-xl gap-x-2 text-sm font-medium rounded-es-xl text-white rounded-br-xl   bg-yellow-500   focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none    hover:bg-yellow-600  " href={file.url}>
           Read
         </a>
 
