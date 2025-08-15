@@ -12,7 +12,6 @@ import Fields from "./components/fields";
 import Feed from "./components/feed";
 import Page from "./components/page";
 import Contr from "./components/contr";
-import Docs from "./components/docs";
 import Cyber from "./components/cyber";
 import AI from "./components/ai"
 import DATASC from "./components/datas"
@@ -81,11 +80,7 @@ function App() {
                 <Contr/>
                 </>
               }/>
-                                          <Route path="/Docs" element={
-                <>
-                <Docs/>                
-                </>
-              }/>
+
 
                                        <Route path="/Cyber" element={
                 <>
